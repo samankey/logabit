@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <Container>
+    <Container class="ft_Black_100">
       <Nav />
       <Nuxt class="layout" />
       <Toast />
