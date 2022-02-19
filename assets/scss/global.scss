@@ -1,0 +1,177 @@
+@import url('normalize.css');
+
+ @font-face {
+  font-weight: 700;
+  font-family: 'Spoqa Han Sans Neo';
+  src: local('Spoqa Han Sans Neo Bold'),
+  url('~assets/fonts/SpoqaHanSansNeo/Bold/SpoqaHanSansNeo-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: 'Spoqa Han Sans Neo';
+  src: local('Spoqa Han Sans Neo Medium'),
+  url('~assets/fonts/SpoqaHanSansNeo/Medium/SpoqaHanSansNeo-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: 'Spoqa Han Sans Neo';
+  src: local('Spoqa Han Sans Neo Regular'),
+  url('~assets/fonts/SpoqaHanSansNeo/Regular/SpoqaHanSansNeo-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 300;
+  font-family: 'Spoqa Han Sans Neo';
+  src: local('Spoqa Han Sans Neo Light'),
+  url('~assets/fonts/SpoqaHanSansNeo/Light/SpoqaHanSansNeo-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 100;
+  font-family: 'Spoqa Han Sans Neo';
+  src: local('Spoqa Han Sans Neo Thin'),
+  url('~assets/fonts/SpoqaHanSansNeo/Thin/SpoqaHanSansNeo-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Material Icons';
+  
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       local('MaterialIcons-Outlined'),
+       url(~assets/fonts/MaterialIcons.woff2) format('woff2'),
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+}
+
+html,body{font-size:14px; font-family: 'Spoqa Han Sans Neo'; width: 100%; height: 100%; color: $Black_100}
+#__nuxt, #__layout{height: 100%;}
+/* component / Font */
+.Headline{font-size:2.3rem; font-weight:600; letter-spacing: -0.04rem;}
+.Title{font-size:1.7rem; font-weight:600; letter-spacing:-0.04rem;}
+.SubTitle{font-size:1.3rem; font-weight:600; letter-spacing:-0.04rem;}
+.Body1{font-size:1.15rem; font-weight:500; letter-spacing:-0.03rem;}
+.Body2{font-size:1rem; font-weight:400; letter-spacing:-0.03rem;}
+.Caption{font-size:.85rem; font-weight:400; letter-spacing:-0.03rem;}
+
+/* 기타 Font */
+.ft_h5 {font-size: .8rem; font-weight: 400;}
+.ft_h3 {font-size: 1.15rem; font-weight: 500;}
+.fc_4 {color: rgba(0, 17, 41, 0.4) !important;}
+.fc_10 {color: #001129 !important;}
+
+/* 기타 bg */
+.fc_blue {color: #005ADB !important; background-color: #E6EFFC;}
+.bg_blue {background-color: #005ADB; color: #fff !important; border: 1px solid #005ADB; border-right: none;}
+
+// Color
+$DarkBlue : rgba(0, 18, 162, 1);
+$DeepBlue : rgba(0, 37, 184, 1);
+$Blue : rgba(0, 90, 219, 1);
+$Blue_30 : rgba(0, 90, 219, 0.3);
+$Blue_10 : rgba(0, 90, 219, 0.1);
+$Green :rgba(25, 204, 139, 1);
+$Green_10 :rgba(25, 204, 139, 0.1);
+$Red : rgba(242, 31, 63, 1);
+$Red_10 : rgba(242, 31, 63, 0.1);
+
+$DarkGray : rgba(101, 109, 122, 1);
+$MidGray : rgba(214, 216, 225, 1);
+$LightGray : rgba(238, 240, 244, 1);
+$BackGray : rgba(246, 247, 251, 1);
+
+$Black_100 : rgba(0, 17, 41, 1);
+$Black_70 : rgba(0, 17, 41, 0.7);
+$Black_40 : rgba(0, 17, 41, 0.4);
+$Black_20 : rgba(0, 17, 41, 0.2);
+
+$White_100 : rgba(255, 255, 255, 1);
+$White_70 : rgba(255, 255, 255, 0.7);
+$White_40 : rgba(255, 255, 255, 0.4);
+$White_20 : rgba(255, 255, 255, 0.2);
+
+/*background-color*/
+.bg_DarkBlue{background-color:$DarkBlue;}  /* 추가 */
+.bg_DeepBlue{background-color:$DeepBlue;} /* 추가 */
+.bg_Blue{background-color:$Blue;}  /* bg_main */
+.bg_Blue_30{background-color:$Blue_30;} /* 추가 */
+.bg_Blue_10{background-color:$Blue_10;}/* 추가 */
+.bg_Green{background-color:$Green;}
+.bg_Green_10{background-color:$Green_10;} /* bg_g */
+.bg_Red{background-color:$Red;} /* bg_r */
+.bg_Red_10{background-color:$Red_10}
+.bg_DarkGray{background-color:$DarkGray;} /* bg_gray4 */ 
+.bg_MidGray{background-color:$MidGray;} /* bg_gray */ 
+.bg_LightGray{background-color:$LightGray;} /* 추가 */
+.bg_BackGray{background-color:$BackGray;} /* bg_f6 */ 
+
+.bg_Black_100{background-color:$Black_100;} /* bg_blackGrey */
+.bg_Black_70{background-color:$Black_70;} /* 추가 */
+.bg_Black_40{background-color:$Black_40;} /* 추가 */
+.bg_Black_20{background-color:$Black_20;} /* 추가 */
+
+.bg_White_100{background-color:$White_100;}  /* bg_ff */
+.bg_White_70{background-color:$White_70;} /* 추가 */
+.bg_White_40{background-color:$White_40;} /* 추가 */
+.bg_White_20{background-color:$White_20;} /* 추가 */
+
+/* svg color */
+.svg_Blue{ 
+  /* 005ADB */
+  filter: invert(20%) sepia(52%) saturate(4726%) hue-rotate(206deg) brightness(100%) contrast(108%);
+}
+.svg_Black_100{
+  /* 001129 */
+  filter: invert(5%) sepia(50%) saturate(3334%) hue-rotate(200deg) brightness(99%) contrast(104%);
+}
+.svg_MidGray{
+  /* D6D8E1 */
+  filter: invert(88%) sepia(6%) saturate(232%) hue-rotate(192deg) brightness(101%) contrast(88%);
+}
+
+/*font color*/
+.ft_DarkBlue{color:$DarkBlue;} 
+.ft_DeepBlue{color:$DeepBlue;}
+.ft_Blue{color:$Blue;} /* ft_main */
+.ft_Green{color:$Green;} /* ft_g */ 
+.ft_Red{color:$Red;} /* ft_r */
+.ft_Black_100{color:$Black_100;} /* ft_100 */
+.ft_Black_70{color:$Black_70;} /* ft_70 */ 
+.ft_Black_40{color:$Black_40;} /* ft_40 */ 
+.ft_Black_20{color:$Black_20;} /* ft_20 */ 
+.ft_White_100{color:$White_100;} /* ft_w */
+.ft_White_70{color:$White_70;} /* ft_w_70 */
+.ft_White_40{color:$White_40;}
+.ft_White_20{color:$White_20;}
+.ft_MidGray{color:$MidGray;}
+.ft_DarkGray{color:$DarkGray;}
+
+* {box-sizing: border-box; }
+body{background-color: #F6F7FB;}
+button {border: 0; outline: 0; background-color: transparent; cursor: pointer;}
+ul {list-style: none; padding-left: 0px;}
+textarea:focus{outline: none;}
+input {background-color: transparent; color: #001129; border-style: none;}
+input:focus {outline: none;}
+h1,h2,h3,p,ul {margin: 0; font-size: 1rem;}

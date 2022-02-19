@@ -1,0 +1,12 @@
+dist
+*.log
+.nuxt
+.vscode
+.DS_Store
+Thumbs.db
+.sass-cache
+$RECYCLE.BIN/
+node_modules
+npm-debug.log*
+package-lock.json
+UserInterfaceState.xcuserstate

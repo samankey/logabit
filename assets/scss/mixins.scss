@@ -1,0 +1,98 @@
+// 체크리스트
+@mixin check-list {
+  display: flex;
+  align-items: center;
+  width: calc(25% - 0.75rem);
+  height: 3rem;
+  margin-right: 1rem;
+
+  input {
+    margin: 0.5rem;
+  }
+
+  label {
+    color: rgba(0, 17, 41, 0.7);
+    cursor: pointer;
+  }
+}
+
+// 키워드
+@mixin keyword-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 1.5rem;
+  width: 100%;
+
+  .item {
+    display: flex;
+    align-items: center;
+
+    margin: {
+      right: 1rem;
+      bottom: 1rem;
+    }
+
+    padding: 0.75rem 1rem;
+    border:1px solid #E0E4EA;
+    border-radius: .5rem;
+    font-size: 1.15rem;
+
+    img {
+      margin-left: .5rem;
+      width: 1rem;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+  }
+}
+
+// 필터 검색버튼
+@mixin search-button {
+  right: 3rem;
+  bottom: 2.3rem;
+  width: 6rem;
+  height: 3.4rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: #005ADB !important;
+  font-size: 1.15rem;
+}
+
+//varible
+$Black_100 : rgba(0, 17, 41, 1);
+$Black_40 : rgba(0, 17, 41, 0.4);
+$Black_10 : rgba(0, 17, 41, 0.1);
+$Blue : rgba(0, 90, 219, 1);
+
+// 메인 섹션 타이틀영역
+@mixin main-item-wrap{
+  .sectionTitleWrap {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem 2rem 1.5rem;
+    border-radius: 1rem 1rem 0 0;
+    border-bottom:1px solid rgba(224, 228, 234, .5);
+
+    .titleRightBtn {
+      border:1px solid rgba(224, 228, 234, 1);
+      border-radius: .5rem;
+      cursor: pointer;
+    }
+  }
+
+  .itemContentsWrap{
+    padding:0 2rem 2rem 2rem;
+  }
+}
+
+
+
+// 모바일대응
+@mixin mobile { 
+  @media (max-width: 500px) {
+    @content;
+  }
+}
