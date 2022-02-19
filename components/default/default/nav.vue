@@ -1,12 +1,19 @@
 <template>
-  <div class="nav Headline">
-    logabit
+  <div>
+    <div class="nav Headline">
+      logabit
+    </div>
+    <Menu />
   </div>
 </template>
 
 <script>
+import Menu from '@/components/nav/menu';
+
 export default {
-  
+  components: {
+    Menu
+  }
 };
 </script>
 
@@ -14,7 +21,7 @@ export default {
 .nav {
   display: flex;
   justify-content: center;
-  padding: 2.5rem 0;
+  padding: 2rem 0;
   width: 100%;
   border-bottom: 4px solid #001129;
 }
