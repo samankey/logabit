@@ -1,7 +1,12 @@
 <template>
   <div>
     <div class="nav Headline">
-      logabit
+      <div>
+        logabit
+      </div>
+      <div>
+        기록의 습관
+      </div>
     </div>
     <Menu v-if="!isShowNav" />
   </div>
@@ -26,9 +31,17 @@ export default {
 <style lang="scss" scoped>
 .nav {
   display: flex;
-  justify-content: center;
-  padding: 2rem 0;
+  justify-content: space-between;
+  
   width: 100%;
   border-bottom: 4px solid #001129;
+
+  div {
+    padding: 0.25rem 1.5rem;
+    
+    &:first-child {
+      border-right: 4px solid #001129;
+    }
+  }
 }
 </style>

@@ -5,7 +5,7 @@
       <Nuxt class="layout" />
       <Toast />
     </Container>
-    <div class="footer Caption ft_Black_20">developed by samankeyc</div>
+    <div class="footer Caption ft_Black_20">developed by samankeyc, undefinedp</div>
   </div>
 </template>
 

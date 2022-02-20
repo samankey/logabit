@@ -1,17 +1,88 @@
 <template>
   <ul class="menuWrap Body1">
-    <li v-for="(item, index) in menuList" :key="index" class="menuItem">
-      {{ item }}
+    <li
+      v-for="(item, index) in nav"
+      :key="index"
+      class="menuItem"
+      :class="navActive(index)"
+      @click.stop="goLink(nav[index])"
+    >
+      {{ item.title }}
     </li>
   </ul>
 </template>
 
 <script>
+const pathToNavIndex = {
+  '': 0,
+  '/': 0,
+  '/link': 1,
+  '/list': 2,
+};
+
+import _ from 'lodash';
+
 export default {
   data () {
     return {
-      menuList: ['이번엔 어떤 포스팅이?', '포스팅 할게요!', '지난 포스팅도 볼래요!']
+      nav: [
+        {
+          isActive: false,
+          title: '이번엔 어떤 포스팅이?',
+          to: '/'
+        },
+        {
+          isActive: false,
+          title: '포스팅 할게요',
+          to: '/link'
+        },
+        {
+          isActive: false,
+          title: '지난 포스팅도 볼래요!',
+          to: '/list'
+        }
+      ]
     };
+  },
+
+  watch: {
+    '$route.path' () {
+      this.renewalNavActiveState();
+    }
+  },
+
+  mounted () {
+    this.renewalNavActiveState();
+  },
+
+  methods: {
+    navActive (num) {
+      return (this.nav[num].isActive) ? 'active' : '';
+    },
+
+    renewalNavActiveState () {
+      this.nav.forEach((value) => {
+        value.isActive = false;
+      });
+      try {
+        this.nav[pathToNavIndex[this.$route.path]].isActive = true;
+      } catch (e) {}
+    },
+
+    goLink (navData) {
+      let navIdx = -1;
+      _.each(this.nav, (nav, index) => {
+        if (nav.to === navData.to) {
+          navIdx = index;
+        }
+
+        this.nav[index].isActive = false;
+      });
+
+      this.nav[navIdx].isActive = true;
+
+      return this.$router.push({ path: navData.to });
+    }
   }
 }
 </script>
@@ -31,6 +102,11 @@ export default {
     &:last-child {
       border-right: none;
     }
+  }
+
+  .active {
+    color: #FFF;
+    background-color: #001129;
   }
 }
 </style>
