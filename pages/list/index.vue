@@ -1,8 +1,8 @@
 <template>
   <div>
     <ImageHeader
-     :img="'mainImg'"
-     :contents="'👀 다른 포스팅도 읽어보기!'"
+     :img="'list'"
+     :contents="'🌈 시즌 1 | 1회차'"
     />
     <ListUser />
   </div>
