@@ -1,19 +1,22 @@
 <template>
   <div>
+    <ListFilter />
     <ImageHeader
-     :img="'mainImg'"
-     :contents="'👀 다른 포스팅도 읽어보기!'"
+     :img="'list'"
+     :contents="'🌈 시즌 1 | 1회차'"
     />
     <ListUser />
   </div>
 </template>
 
 <script>
+import ListFilter from '@/components/list/listFilter';
 import ImageHeader from '@/components/default/default/imageHeader';
 import ListUser from '@/components/default/list/listUser';
 
 export default {
   components: {
+    ListFilter,
     ImageHeader,
     ListUser
   },
