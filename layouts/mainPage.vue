@@ -18,7 +18,7 @@ export default {
     Container,
     Nav,
     Toast
-  },
+  }
 };
 </script>
 
