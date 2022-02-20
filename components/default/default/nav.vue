@@ -3,7 +3,7 @@
     <div class="nav Headline">
       logabit
     </div>
-    <Menu />
+    <Menu v-if="!isShowNav" />
   </div>
 </template>
 
@@ -13,6 +13,12 @@ import Menu from '@/components/nav/menu';
 export default {
   components: {
     Menu
+  },
+
+  computed: {
+    isShowNav () {
+      return this.$route.path === '/login' || this.$route.path === '/join';
+    }
   }
 };
 </script>

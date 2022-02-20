@@ -1,12 +1,13 @@
 <template>
   <div>
     <ImageHeader
-     :img="'link'"
-     :contents="'📝 타이틀과 링크를 적어 올려보세요!'"
+     :img="'login'"
+     :contents="'🏅 오늘도 한 걸음 나아갔어요!'"
     />
-    <Input :label="'타이틀'" :placeholder="'타이틀을 적어주세요 (최대 25글자)'"/>
-    <Input :label="'링크'" :placeholder="'링크를 붙여넣어주세요'"/>
-    <ButtonDefault :text="'포스팅하기'" :style-type="'link'" />
+    <Input :label="'이메일'" :placeholder="'이메일을 적어주세요'"/>
+    <Input :label="'비밀번호'" :type="'password'" :placeholder="'비밀번호를 적어주세요'"/>
+    <ButtonDefault :text="'로그인하기'" :style-type="'login'" />
+     <ButtonDefault :text="'계정이 없으신가요?'" />
   </div>
 </template>
 
