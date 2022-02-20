@@ -1,10 +1,11 @@
 <template>
   <div class="main">
-    <Container class="ft_Black_100">
+    <Container class="container ft_Black_100">
       <Nav />
       <Nuxt class="layout" />
       <Toast />
     </Container>
+    <div class="footer Caption ft_Black_20">developed by samankeyc</div>
   </div>
 </template>
 
@@ -24,8 +25,18 @@ export default {
 
 <style lang="scss" scoped>
 .main {
+  position: relative;
   display: flex;
   justify-content: center;
   overflow: hidden;
+
+  .container {
+    margin-bottom: 5rem;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 1rem;
+  }
 }
 </style>
