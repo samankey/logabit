@@ -98,10 +98,61 @@ export default {
     flex: 1;
     padding: 1rem 0;
     border-right: 4px solid #001129;
+    cursor: pointer;
+
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    background: #F6F7F9;
+    padding: 8px 15px;
+    /* color: #fff; */
 
     &:last-child {
       border-right: none;
     }
+  }
+
+  .menuItem:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #001129;
+    transform: scaleY(0);
+    transform-origin: 50% 100%;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    -webkit-transform: scaleY(0);
+    -webkit-transform-origin: 50% 100%;
+    -webkit-transition-property: transform;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+  }
+
+  .menuItem:hover,
+  .menuItem:focus,
+  .menuItem:active {
+    color: white;
+  }
+
+  .menuItem:hover:before,
+  .menuItem:focus:before,
+  .menuItem:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
   }
 
   .active {
