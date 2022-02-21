@@ -42,6 +42,12 @@ export default {
 
     .title {
       padding-left: 4rem;
+      cursor: pointer;
+      transition: 0.4s ease-in-out;
+
+      &:hover {
+        transform: translateX(0.5rem);
+      }
     }
   }
 
@@ -54,7 +60,7 @@ export default {
       display: flex;
       align-items: center;
       padding: 0 1.5rem;
-      
+      cursor: pointer;
 
       img {
         width: 1.75rem;
@@ -65,11 +71,13 @@ export default {
     .edit {
       padding: 0.75rem 1.5rem;
       border-left: 4px solid #001129;
+      cursor: pointer;
     }
 
     .delete {
       padding: 0.75rem 1.5rem;
       border-left: 4px solid #001129;
+      cursor: pointer;
     }
   }
 }

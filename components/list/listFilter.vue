@@ -91,6 +91,7 @@ export default {
     flex: 1;
     padding: 1rem 0;
     text-align: center;
+    cursor: pointer;
     
     &:first-child {
       border-right: 4px solid #001129;
