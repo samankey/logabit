@@ -43,6 +43,11 @@ export default {
     .title {
       padding-left: 4rem;
       cursor: pointer;
+      transition: 0.4s ease-in-out;
+
+      &:hover {
+        transform: translateX(0.5rem);
+      }
     }
   }
 
