@@ -37,6 +37,7 @@ export default {
   padding: 1rem 0;
   border-top: 4px solid #001129;
   text-align: center;
+  cursor: pointer;
 }
 
 .join {
